@@ -66,6 +66,8 @@ class PhoneCheck
         ){
             $this->phone = '+' . $this->phone;
         }
+
+        $this->phone = str_ireplace('++', '+', $this->phone);
     }
 
     private function checkAlphabet(): bool
